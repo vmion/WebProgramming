@@ -3,6 +3,12 @@
   <head>
 	<meta charset="utf-8">  <!-- 유니코드 타입 -->
 	<title>기본 HTML 문서</title> <!-- 헤더에 들어갈 타이틀 -->
+	<style>
+		fieldset{
+			width:800px;
+			padding : 20px;
+		}
+	</style>
   </head>
   <body>
      <p> 안녕하세요 </p> <!-- 문장 출력을 위한 태그 -->
@@ -10,8 +16,101 @@
 	<h2> 가나다.. </h2>
 	<h3> 123456 </h3>
 	<img src = "images/test.jpg"
-	style = "width: 512px; height:512px;"> 
+	style = "width: 300px; height:300px;"> 
 	<!-- 이미지 삽입(동일한 폴더에 존재) -->
       <p> 일기 끝 </p>
+	<a href = http://www.naver.com> 네이버 </a>
+	<br>
+	<br>
+	<object>
+	<embed src = "https://www.youtube.com/embed/qZi1Xh0_8q4" width = "520"
+ 	height = "400" allowfullscreen = "true"></embed>	
+	<br>
+	<br>
+	<table border="1" width = "40%" height = "10%" cellspacing = "4">
+		<thead>
+		<caption>우선순위</caption>
+		<tr align = "center" bgcolor = "blue">
+			<!--<td></td>-->
+			<th>1</th>
+			<th>2</th>
+			<th>3</th>
+		</tr>
+		<tr>
+			<td></td>
+			<th>1</th>
+			<th>2</th>
+			<th>3</th>	
+		</tr>
+		</thead>
+	</table>
+	<br>
+	<br>
+	<table border="2">
+		<colgroup>
+			<col style="width:100px;">
+			<col style="width:100px;">
+			<col style="width:100px;">
+		</colgroup>
+		<tr>
+			<th rowspan = "2">이름</th>
+			<td></td>
+			<td></td>
+		</tr>
+		<tr>
+			<!-- <th>주소</th> -->
+			<td rowspan = "2"></td>
+			<td></td>
+		</tr>		
+		<tr>
+			<th>자기소개</th>
+			<!-- <td></td> -->
+			<td></td>
+		</tr>
+	</table>
+	<table 
+		border="1"
+		width = "400"
+		height = "100"
+		cellspacing	 = "1">
+		<caption>우선순위</caption>
+		<tr align = "center" >
+		<td>자료구조	
+		<ol>
+			<li>엔진1</li>
+			<li>엔진2</li>
+			<li>엔진3</li>
+		</ol>
+		</td>		
+		<tr>
+			<td>엔진</td>
+			<th>엔진1</th>
+			<th>엔진2</th>
+			<th>엔진3</th>
+		</tr>
+		<tr align = "center" >
+			<td>자료구조</td>
+			<th>자료구조1</th>
+			<th>자료구조2</th>
+			<th>자료구조3</th>
+		</tr>
+	</table>
+	<!-- 목록 -->
+	<h4>훈련리스트</h4>
+	<ol>
+	<li>엔진1</li>
+	<li>엔진2</li>
+	<li>엔진3</li>
+	</ol>
+	<form>
+	<fieldset>
+	<legend>개인정보</legend>
+		<label for = "name">이름</label>
+		<input type = "text" id = "name">
+		<label for = "name">패스워드</label>
+		<input type = "password" password = "pass"
+		maxlength = '12'>
+	</fieldset>
+	</form>
   </body>
 </html>
