@@ -1,0 +1,7 @@
+ManifestFileVersion: 0
+CRC: 221133121
+AssetBundleManifest:
+  AssetBundleInfos:
+    Info_0:
+      Name: gamecharacter.assetbundle
+      Dependencies: {}

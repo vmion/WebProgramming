@@ -1,3 +1,4 @@
+-a="Z:\github\WebProgramming\GameWebProgramming\Library\PlayerScriptAssemblies\Assembly-CSharp.dll"
 -a="Z:\github\WebProgramming\GameWebProgramming\Library\PlayerScriptAssemblies\Unity.Services.Core.Telemetry.dll"
 -a="Z:\github\WebProgramming\GameWebProgramming\Library\PlayerScriptAssemblies\UnityEngine.TestRunner.dll"
 -a="Z:\github\WebProgramming\GameWebProgramming\Library\PlayerScriptAssemblies\Unity.Timeline.dll"
@@ -31,7 +32,6 @@
 -s="Z:\github\WebProgramming\GameWebProgramming\Library\PackageCache\com.unity.nuget.newtonsoft-json@3.0.2\Runtime"
 -s="Z:\github\WebProgramming\GameWebProgramming\Library\PackageCache\com.unity.ext.nunit@1.0.6\net35\unity-custom"
 -s="Z:\unity\2021.3.15f1\Editor\Data\Managed\UnityEngine"
--s="Z:\unity\2021.3.15f1\Editor\Data\PlaybackEngines\WebGLSupport\Managed"
 -s="Z:\unity\2021.3.15f1\Editor\Data\NetStandard\ref\2.1.0"
 -s="Z:\unity\2021.3.15f1\Editor\Data\NetStandard\compat\2.1.0\shims\netstandard"
 -s="Z:\unity\2021.3.15f1\Editor\Data\NetStandard\Extensions\2.0.0"

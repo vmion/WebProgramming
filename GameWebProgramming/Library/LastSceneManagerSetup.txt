@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/XmlParser.unity
+- path: Assets/Scenes/AssetBundle.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0

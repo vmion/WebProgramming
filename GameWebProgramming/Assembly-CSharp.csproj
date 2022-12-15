@@ -57,6 +57,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Scripts\XmlParser.cs" />
+    <Compile Include="Assets\Scripts\AssetBundleLoad.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Resources\Itemxml.xml" />
