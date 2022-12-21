@@ -363,6 +363,7 @@
 "Assets/Scripts/AssetBundleLoad.cs"
 "Assets/Scripts/BoundsCollision.cs"
 "Assets/Scripts/LogicalRegion.cs"
+"Assets/Scripts/WebTest.cs"
 "Assets/Scripts/XmlParser.cs"
 -langversion:9.0
 

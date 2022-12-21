@@ -2,6 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public struct CellInfo
+{
+    public int arrIndex;
+    public Vector3 centerPos;
+}
 public class LogicalRegion : MonoBehaviour
 {
     float xSize;
@@ -13,6 +18,11 @@ public class LogicalRegion : MonoBehaviour
     float cellzSize;
     float xStartpos;
     float zStartpos;
+    Dictionary<int, CellInfo> cellList;
+    private void Awake()
+    {
+        cellList = new Dictionary<int, CellInfo>();
+    }
     void Start()
     {
         GetMapsize();
@@ -20,7 +30,34 @@ public class LogicalRegion : MonoBehaviour
         cellzSize = size.z / (float)row;
         xStartpos = transform.position.x - size.x * 0.5f;
         zStartpos = transform.position.z + size.z * 0.5f;
+        Initialize();
         SpawnAll();
+    }
+    public void Initialize()
+    {
+        cellList.Clear();
+        int tileCount = row * column;        
+        for(int i = 0; i < tileCount; i++)
+        {
+            int r = i / column;
+            int c = i % column;
+            //셀의 중앙점
+            Vector3 centerPos = GetCellCenterPos(r, c);            
+            //자료구조에 cell 정보 저장
+            CellInfo cellInfo = new CellInfo();
+            cellInfo.arrIndex = i;
+            cellInfo.centerPos = centerPos;
+            cellList.Add(i, cellInfo);
+        }
+    }
+    //셀의 중앙점
+    public Vector3 GetCellCenterPos(int _r, int _c)
+    {
+        Vector3 pos = Vector3.zero;
+        pos.x = xStartpos + cellxSize * _c + cellxSize * 0.5f;
+        pos.y = 1f;
+        pos.z = zStartpos - cellzSize * _r - cellzSize * 0.5f;
+        return pos;
     }
     //격자의 모든 중앙에 게임 오브젝트 생성
     public void SpawnAll()
@@ -32,14 +69,11 @@ public class LogicalRegion : MonoBehaviour
         {
             int nR = i / column;
             int nC = i % column;
-            Vector3 pos = Vector3.zero;
-            pos.x = xStartpos + cellxSize * nC + cellxSize * 0.5f;
-            pos.y = 1f;
-            pos.z = zStartpos - cellzSize * nR - cellzSize * 0.5f;
+            Vector3 centerPos = GetCellCenterPos(nR, nC);
             //게임 오브젝트의 위치 계산
             GameObject tmpObj = GameObject.CreatePrimitive(PrimitiveType.Cube);
             tmpObj.name = "Monster";
-            tmpObj.transform.position = pos;
+            tmpObj.transform.position = centerPos;
         }
     }
     public void GetMapsize()
@@ -77,6 +111,30 @@ public class LogicalRegion : MonoBehaviour
     }
     void Update()
     {
+        if(Input.GetMouseButtonDown(0))
+        {
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            RaycastHit hitInfo;
+            if(Physics.Raycast(ray, out hitInfo, Mathf.Infinity))
+            {
+                Debug.Log(hitInfo.point);
+                //마우스로 선택한 지점의 좌표를 알고 있으며
+                //row의 개수와 column의 개수를 알고 있는 상황
+                //cell하나의 크기를 알고 있다.
+                //마우스로 선택한 row와 column을 구하시오.
+                int _col = (int)((hitInfo.point.x + size.x * 0.5f) / cellxSize);
+                int _row = -1*(int)((hitInfo.point.z - size.z * 0.5f) / cellzSize);
+                int key = _row * column + _col;
+                CellInfo result;
+                if(cellList.TryGetValue(key, out result))
+                {
+                    Debug.Log(result.centerPos);
+                    //검색한 위치에 구를 생성
+                    GameObject obj = GameObject.CreatePrimitive(PrimitiveType.Sphere);
+                    obj.transform.position = result.centerPos;                    
+                }
+            }
+        }
         
     }
 }
