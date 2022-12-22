@@ -331,6 +331,8 @@
 -r:"Library/Bee/artifacts/2000b0aE.dag/Unity.VSCode.Editor.ref.dll"
 -r:"Library/Bee/artifacts/2000b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/2000b0aE.dag/UnityEngine.UI.ref.dll"
+"Assets/Minimap/Character.cs"
+"Assets/Minimap/Minimap.cs"
 "Assets/Samples/Cinemachine/2.8.9/Cinemachine Example Scenes/Scenes/2D/LoseSightWhenTargetsFallsOffThePlatform.cs"
 "Assets/Samples/Cinemachine/2.8.9/Cinemachine Example Scenes/Scenes/2D/MouseScrollZoom2D.cs"
 "Assets/Samples/Cinemachine/2.8.9/Cinemachine Example Scenes/Scenes/3rdPersonWithAimMode/ActivateOnKeypress.cs"
@@ -366,6 +368,9 @@
 "Assets/Scripts/Test_Solution.cs"
 "Assets/Scripts/WebTest.cs"
 "Assets/Scripts/XmlParser.cs"
+"Assets/ScrollView/Item.cs"
+"Assets/ScrollView/ScrollViewTest.cs"
+"Assets/Stick/JoyStick.cs"
 -langversion:9.0
 
 /deterministic

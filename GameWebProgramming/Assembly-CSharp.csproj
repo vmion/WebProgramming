@@ -69,6 +69,7 @@
     <Compile Include="Assets\Samples\Cinemachine\2.8.9\Cinemachine Example Scenes\Scenes\DualTarget\MoveAimTarget.cs" />
     <Compile Include="Assets\Samples\Cinemachine\2.8.9\Cinemachine Example Scenes\Scenes\Anywhere Door\PlayerLookAt.cs" />
     <Compile Include="Assets\Samples\Cinemachine\2.8.9\Cinemachine Example Scenes\Shared\Scripts\ExampleHelpWindow.cs" />
+    <Compile Include="Assets\Scripts\Test_Solution.cs" />
     <Compile Include="Assets\Samples\Cinemachine\2.8.9\Cinemachine Example Scenes\Scenes\BossCamera\CustomLockCameraY.cs" />
     <Compile Include="Assets\Samples\Cinemachine\2.8.9\Cinemachine Example Scenes\Shared\Scripts\PlayerMove.cs" />
     <Compile Include="Assets\Samples\Cinemachine\2.8.9\Cinemachine Example Scenes\Scenes\Scripting\ScriptingExample.cs" />
@@ -90,7 +91,11 @@
     <Compile Include="Assets\Scripts\WebTest.cs" />
     <Compile Include="Assets\Samples\Cinemachine\2.8.9\Cinemachine Example Scenes\Shared\Scripts\ActivateCameraWithDistance.cs" />
     <Compile Include="Assets\Samples\Cinemachine\2.8.9\Cinemachine Example Scenes\Scenes\Anywhere Door\TagChanger.cs" />
-    <Compile Include="Assets\Scripts\Test_Solution.cs" />
+    <Compile Include="Assets\Minimap\Minimap.cs" />
+    <Compile Include="Assets\ScrollView\ScrollViewTest.cs" />
+    <Compile Include="Assets\Stick\JoyStick.cs" />
+    <Compile Include="Assets\ScrollView\Item.cs" />
+    <Compile Include="Assets\Minimap\Character.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\Fantasy Forest Environment Free Sample\StandardNoCulling.shader" />
